@@ -10,5 +10,4 @@ public class Application {
         System.out.println("Hello pzp");
         SpringApplication.run(Application.class, args);
     }
-
 }
