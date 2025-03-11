@@ -1,4 +1,4 @@
-package com.example.springboot.Dao;
+package com.example.springboot.dao;
 
 import jakarta.persistence.*;
 
