@@ -1,7 +1,7 @@
-package com.example.springboot.service;
+package com.example.springboot.Service;
 
-import com.example.springboot.dao.Demo;
-import com.example.springboot.dao.DemoRepository;
+import com.example.springboot.Dao.Demo;
+import com.example.springboot.Dao.DemoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
