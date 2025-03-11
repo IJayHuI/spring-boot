@@ -1,10 +1,10 @@
 package com.example.springboot.service;
 
-import com.example.springboot.dao.Demo;
+import com.example.springboot.dto.DemoDto;
 
 public interface DemoService {
 
-    Demo getDemoById(Long id);
+    DemoDto getDemoById(Long id);
 
 
 }

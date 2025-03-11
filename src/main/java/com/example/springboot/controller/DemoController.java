@@ -1,6 +1,6 @@
 package com.example.springboot.controller;
 
-import com.example.springboot.dao.Demo;
+import com.example.springboot.dto.DemoDto;
 import com.example.springboot.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +14,7 @@ public class DemoController {
     private DemoService demoService;
 
     @GetMapping("/demo/{id}")
-    public Demo getDemoById(@PathVariable long id) { //路径变量
+    public DemoDto getDemoById(@PathVariable long id) { //路径变量
         return demoService.getDemoById(id);
     }
 
