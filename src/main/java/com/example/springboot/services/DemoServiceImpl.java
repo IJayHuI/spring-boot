@@ -1,4 +1,4 @@
-package com.example.springboot.service;
+package com.example.springboot.services;
 
 import com.example.springboot.converter.DemoConverter;
 import com.example.springboot.dao.Demo;
