@@ -6,5 +6,6 @@ public interface DemoService {
 
     DemoDto getDemoById(Long id);
 
+    Long AddDemo(DemoDto demoDto);
 
 }
