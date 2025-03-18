@@ -8,4 +8,7 @@ public interface DemoService {
 
     Long AddDemo(DemoDto demoDto);
 
+    void deleteDemoById(long id);
+
+    DemoDto updateDemoById(long id, String name, String email);
 }

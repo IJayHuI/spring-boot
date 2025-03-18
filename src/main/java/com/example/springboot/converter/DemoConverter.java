@@ -15,10 +15,10 @@ public class DemoConverter {
     }
 
     //封装给数据库（返回的数据重新回到demo）（sava）
-    public static Demo convertDemoDto(DemoDto demoDto) {
+    public static Demo convertToDemo(DemoDto demoDto) {
         Demo demo = new Demo();
-        demoDto.setName(demoDto.getName());
-        demoDto.setEmail(demoDto.getEmail());
+        demo.setName(demoDto.getName());
+        demo.setEmail(demoDto.getEmail());
         return demo;
     }
 

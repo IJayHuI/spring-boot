@@ -22,4 +22,16 @@ public class DemoController {
         return Response.newSuccess(demoService.AddDemo(demoDto));
     }
 
+    @DeleteMapping("/demo/{id}")
+    public void deleteDemoById(@PathVariable long id) {
+        demoService.deleteDemoById(id);
+    }
+
+    @PutMapping("/demo/{id}")
+    public Response<DemoDto> updateDemoById(@PathVariable long id, @RequestParam(required = false) String name,
+                                            @RequestParam(required = false) String email) {
+        return Response.newSuccess(demoService.updateDemoById(id, name, email));
+
+    }
+
 }
