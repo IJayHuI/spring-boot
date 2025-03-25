@@ -1,6 +1,6 @@
 package com.example.springboot.services;
 
-import com.example.springboot.converter.DemoConverter;
+import com.example.springboot.converters.DemoConverter;
 import com.example.springboot.dao.Demo;
 import com.example.springboot.dao.DemoRepository;
 import com.example.springboot.dto.DemoDto;

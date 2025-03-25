@@ -1,4 +1,4 @@
-package com.example.springboot.converter;
+package com.example.springboot.converters;
 
 import com.example.springboot.dao.Demo;
 import com.example.springboot.dto.DemoDto;
