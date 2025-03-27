@@ -1,8 +1,8 @@
-package com.example.springboot.controllers;
+package com.example.springboot.controller;
 
 import com.example.springboot.Response;
 import com.example.springboot.dto.DemoDto;
-import com.example.springboot.services.DemoService;
+import com.example.springboot.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
