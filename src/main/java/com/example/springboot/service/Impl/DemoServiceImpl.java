@@ -1,9 +1,10 @@
-package com.example.springboot.service;
+package com.example.springboot.service.Impl;
 
 import com.example.springboot.converter.DemoConverter;
 import com.example.springboot.dao.Demo;
 import com.example.springboot.dao.DemoRepository;
 import com.example.springboot.dto.DemoDto;
+import com.example.springboot.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
