@@ -13,5 +13,4 @@ public class Hello {
         return List.of("Hello", "World");
     }
 
-//    Add a test
 }
