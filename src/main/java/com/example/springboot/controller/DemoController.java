@@ -4,6 +4,10 @@ import com.example.springboot.Response;
 import com.example.springboot.dto.DemoDto;
 import com.example.springboot.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -15,6 +19,20 @@ public class DemoController {
     @GetMapping("/demo/{id}")
     public Response<DemoDto> getDemoById(@PathVariable long id) { //路径变量
         return Response.newSuccess(demoService.getDemoById(id));
+    }
+
+    @GetMapping("/demos")
+    public Response<Page<DemoDto>> getDemos(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(required = false) String query) {
+
+        Pageable pageable = PageRequest.of(page, size);
+        return Response.newSuccess(
+                StringUtils.hasText(query) ?
+                        demoService.searchDemos(query, pageable) :
+                        demoService.getAllDemos(pageable)
+        );
     }
 
     @PostMapping("/demo")

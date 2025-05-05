@@ -14,12 +14,14 @@ public class DemoConverter {
         return demoDto;
     }
 
-    //封装给数据库（返回的数据重新回到demo）（sava）
+    //封装给数据库（返回的数据重新回到demo）（save）
     public static Demo convertToDemo(DemoDto demoDto) {
         Demo demo = new Demo();
         demo.setName(demoDto.getName());
         demo.setEmail(demoDto.getEmail());
         return demo;
     }
+
+    
 
 }

@@ -6,6 +6,8 @@ import com.example.springboot.dao.DemoRepository;
 import com.example.springboot.dto.DemoDto;
 import com.example.springboot.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
@@ -25,6 +27,17 @@ public class DemoServiceImpl implements DemoService {
         return DemoConverter.convertDemoDto(demo);
     }
 
+    @Override
+    public Page<DemoDto> getAllDemos(Pageable pageable) {
+        return demoRepository.findAll(pageable)
+                .map(DemoConverter::convertDemoDto);
+    }
+
+    @Override
+    public Page<DemoDto> searchDemos(String query, Pageable pageable) {
+        return demoRepository.findByNameContainingOrEmailContaining(query, query, pageable)
+                .map(DemoConverter::convertDemoDto);
+    }
     @Override
     public Long AddDemo(DemoDto demoDto) {
         List<Demo> demoList = demoRepository.findByEmail(demoDto.getEmail());
